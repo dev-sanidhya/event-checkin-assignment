@@ -14,6 +14,7 @@ A full-stack React Native application with Node.js backend that allows users to 
 ## 🛠 Tech Stack
 
 ### Backend
+
 - **Node.js** with TypeScript
 - **GraphQL** with Apollo Server Express
 - **PostgreSQL** database with Prisma ORM
@@ -21,6 +22,7 @@ A full-stack React Native application with Node.js backend that allows users to 
 - **JWT** for authentication
 
 ### Frontend
+
 - **React Native** with Expo
 - **TypeScript** for type safety
 - **Apollo Client** for GraphQL
@@ -60,6 +62,7 @@ cp .env.example .env
 ```
 
 **Environment Variables (.env):**
+
 ```env
 DATABASE_URL="postgresql://postgres:your_password@localhost:5432/event_checkin_db?schema=public"
 JWT_SECRET="your_jwt_secret_key_here"
@@ -104,6 +107,7 @@ npm start
 ```
 
 The backend will be available at:
+
 - GraphQL Playground: http://localhost:4000/graphql
 - Socket.io: http://localhost:4000
 
@@ -129,7 +133,7 @@ The app includes mock authentication with these demo users:
 - **Jane Smith**: `jane@example.com`
 - **Bob Johnson**: `bob@example.com`
 
-*Note: Password is optional for demo purposes*
+_Note: Password is optional for demo purposes_
 
 ## 📱 How to Use
 
@@ -164,16 +168,19 @@ event-checkin-app/
 ## 🔌 API Endpoints
 
 ### GraphQL Queries
+
 - `events`: Get all events with attendees
 - `event(id)`: Get specific event details
 - `me`: Get current user info
 
 ### GraphQL Mutations
+
 - `login(email, password)`: Authenticate user
 - `joinEvent(eventId)`: Join an event
 - `leaveEvent(eventId)`: Leave an event
 
 ### WebSocket Events
+
 - `join-event`: Join event room for real-time updates
 - `leave-event`: Leave event room
 - `event-updated`: Receive real-time event updates
@@ -181,6 +188,7 @@ event-checkin-app/
 ## 🧪 Testing
 
 ### Backend Testing
+
 ```bash
 cd backend
 
@@ -196,7 +204,9 @@ curl -X POST http://localhost:4000/graphql \
 ```
 
 ### Frontend Testing
+
 The React Native app can be tested using:
+
 - Expo Go app on physical device
 - iOS Simulator (macOS only)
 - Android Emulator
@@ -205,11 +215,13 @@ The React Native app can be tested using:
 ## 🚀 Deployment
 
 ### Backend Deployment
+
 1. Build the TypeScript code: `npm run build`
 2. Set production environment variables
 3. Deploy to your preferred platform (Heroku, AWS, etc.)
 
 ### Frontend Deployment
+
 1. Build for production: `expo build`
 2. Deploy to app stores or use Expo's hosting
 
@@ -218,17 +230,20 @@ The React Native app can be tested using:
 ### Common Issues
 
 **Database Connection Error:**
+
 - Ensure PostgreSQL is running
 - Check database credentials in `.env`
 - Verify database exists
 
 **Port Already in Use:**
+
 ```bash
 # Kill process using port 4000
 pkill -f "node.*4000"
 ```
 
 **Expo Metro Bundle Error:**
+
 ```bash
 # Clear Expo cache
 expo start -c
@@ -237,12 +252,14 @@ expo start -c
 ## 📝 Assignment Requirements Checklist
 
 - ✅ **Backend (Node.js + GraphQL + Prisma + Socket.io)**
+
   - ✅ GraphQL API with queries and mutations
   - ✅ Prisma with PostgreSQL integration
   - ✅ Mock authentication system (JWT)
   - ✅ Socket.io for real-time updates
 
 - ✅ **Frontend (React Native + Expo)**
+
   - ✅ Basic login screen
   - ✅ Event List Page with TanStack Query
   - ✅ Event Detail Page with join functionality
@@ -250,6 +267,7 @@ expo start -c
   - ✅ Real-time updates via Socket.io
 
 - ✅ **Database Schema (Prisma)**
+
   - ✅ User model with events relation
   - ✅ Event model with attendees relation
 
@@ -261,9 +279,8 @@ expo start -c
 
 ## 👥 Contributors
 
-- Your Name - Full Stack Developer
+- Sanidhya Shishodia - Full Stack Developer
 
 ## 📄 License
 
 This project is for educational purposes as part of a full-stack developer assignment.
-
